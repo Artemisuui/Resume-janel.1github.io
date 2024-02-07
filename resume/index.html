@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MY PERSONAL RESUME</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      padding: 70px;
+    }
+    .container {
+      max-width: 500px;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center">MY PERSONAL RESUME</h1>
+    <form id="resume-form">
+      <div class="form-group">
+        <label for="nameInput">NAME:</label>
+        <input type="text" class="form-control" id="nameInput" placeholder="">
+      </div>
+      <div class="form-group">
+        <label for="bdayInput">BIRTHDATE:</label>
+        <input type="email" class="form-control" id="emailInput" placeholder="">
+      </div>
+      <div class="form-group">
+        <label for="ageInput">AGE:</label>
+        <input type="tel" class="form-control" id="phoneInput" placeholder="">
+      </div>
+      <div class="form-group">
+        <label for="genderInput">GENDER:</label>
+        <select class="form-control" id="genderInput">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="contactInput">CONTACT DETAILS:</label>
+        <input type="text" class="form-control" id="contactInput" placeholder="Enter your number or email...">
+      </div>
+      <div class="form-group">
+        <label for="educationInput">EDUCATION:</label>
+        <input type="text" class="form-control" id="educationInput" placeholder="Enter your educational attainment...">
+      </div>
+      <div class="form-group">
+        <label for="skillsInput">SKILLS:</label>
+        <input type="text" class="form-control" id="skillsInput" placeholder="">
+      </div>
+      <div class="form-group">
+        <label for="hobbiesInput">HOBBIES:</label>
+        <input type="text" class="form-control" id="hobbiesInput" placeholder="">
+      </div>
+      <div class="form-group">
+        <label for="workInput">WORK EXPERIENCE:</label>
+        <input type="text" class="form-control" id="workInput" placeholder="Enter your work experience...">
+      </div>
+      <button type="done" class="btn btn-primary btn-block">DONE</button>
+    </form>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('#resume-form').submit(function(event){
+        event.preventDefault();
+        var name = $('#nameInput').val();
+        var email = $('#bdayInput').val();
+        var phone = $('#ageInput').val();
+        var gender = $('#genderInput').val();
+        var parents = $('#contactInput').val();
+        var elementary = $('#educationInput').val();
+        var middle = $('#skillsInput').val();
+        var high = $('#hobbiesInput').val();
+        var college = $('#workInput').val();
+        
+       
+        console.log("NAME:", name);
+        console.log("BIRTHDATE:", email);
+        console.log("AGE:", phone);
+        console.log("GENDER:", gender);
+        console.log("CONTACT DETAILS:", parents);
+        console.log("EDUCATION:", elementary);
+        console.log("SKILLS:", middle);
+        console.log("HOBBIES:", high);
+        console.log("WORK EXPERIENCE:", college);
+        
+        
+        $(this)[0].reset();
+      });
+    });
+  </script>
+</body>
+</html>
+maxcdn.bootstrapcdn.com
